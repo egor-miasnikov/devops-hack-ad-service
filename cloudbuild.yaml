@@ -7,7 +7,7 @@ steps:
       - '-Dsonar.projectKey=devops-hack-ad-service'
       - '-Dsonar.sources=src/main/java/'
       - '-Dsonar.language=java'
-      - '-Dsonar.java.binaries=**/target/classes'
+      - '-Dsonar.java.binaries=target/classes'
   #step 2
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'gcr.io/hackaton2019-242912/adservice', '.']
