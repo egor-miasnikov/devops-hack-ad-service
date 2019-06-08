@@ -1,5 +1,8 @@
 steps:
   #step 1
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/hackaton2019-242912/adservice', '.']
+  #step 2
   - name: 'gcr.io/hackaton2019-242912/sonar-scanner:latest'
     args:
       - '-Dsonar.host.url=https://sonarcloud.io'
@@ -8,9 +11,6 @@ steps:
       - '-Dsonar.sources=src/main/java/'
       - '-Dsonar.language=java'
       - '-Dsonar.java.binaries=target/classes'
-  #step 2
-  - name: 'gcr.io/cloud-builders/docker'
-    args: ['build', '-t', 'gcr.io/hackaton2019-242912/adservice', '.']
   #step 3
   - name: 'gcr.io/cloud-builders/kubectl'
     args: ['apply', '-f', 'deployment.yaml', '-n', '$_ENVIRONMENT']
