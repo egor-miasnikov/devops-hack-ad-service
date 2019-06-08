@@ -6,9 +6,8 @@ steps:
   - name: 'gcr.io/hackaton2019-242912/sonar-scanner:latest'
     args:
       - '-Dsonar.host.url=https://sonar.jbtteam.playpit.net'
-      - '-Dsonar.login=a0f57657761781e5014e616f82cca96a4bdcc99f'
+      - '-Dsonar.login=cb344d4c96efc5ce9a74d47f6c275e5e250206d6'
       - '-Dsonar.projectKey=devops-hack-ad-service'
-      - '-Dsonar.organization=epm-gcp'
       - '-Dsonar.sources=.'
 
   #step 3
