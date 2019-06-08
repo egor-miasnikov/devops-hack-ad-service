@@ -4,12 +4,12 @@ steps:
     args: ['build', '-t', 'gcr.io/hackaton2019-242912/adservice', '.']
   #step 2
   - name: 'gcr.io/hackaton2019-242912/sonar-scanner:latest'
-      args:
-        - '-Dsonar.host.url=https://sonar.jbtteam.playpit.net'
-        - '-Dsonar.login=a0f57657761781e5014e616f82cca96a4bdcc99f'
-        - '-Dsonar.projectKey=devops-hack-ad-service'
-        - '-Dsonar.organization=epm-gcp'
-        - '-Dsonar.sources=.'
+    args:
+      - '-Dsonar.host.url=https://sonar.jbtteam.playpit.net'
+      - '-Dsonar.login=a0f57657761781e5014e616f82cca96a4bdcc99f'
+      - '-Dsonar.projectKey=devops-hack-ad-service'
+      - '-Dsonar.organization=epm-gcp'
+      - '-Dsonar.sources=.'
 
   #step 3
   - name: 'gcr.io/cloud-builders/kubectl'
