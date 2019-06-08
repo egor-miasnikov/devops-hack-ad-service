@@ -8,6 +8,7 @@ steps:
         - '-Dsonar.host.url=https://sonar.jbtteam.playpit.net'
         - '-Dsonar.login=a0f57657761781e5014e616f82cca96a4bdcc99f'
         - '-Dsonar.projectKey=devops-hack-ad-service'
+        - '-Dsonar.organization=epm-gcp'
         - '-Dsonar.sources=.'
 
   #step 3
