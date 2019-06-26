@@ -8,7 +8,6 @@ steps:
     env:
       - 'CLOUDSDK_COMPUTE_REGION=europe-west4'
       - 'CLOUDSDK_CONTAINER_CLUSTER=hackaton2019-gke-cluster'
-  #dummy change to check the trigger
 
 
 images: ['gcr.io/hackaton2019-242912/adservice']
